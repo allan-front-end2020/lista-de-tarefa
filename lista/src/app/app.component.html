@@ -1,0 +1,11 @@
+<div class='container'>
+    <div class='card'>
+        <h1>{{ title }}</h1>
+        <input type='text' placeholder='Digite sua nova tarefa' #task/>
+        <button (click)="addTask(task.value)" class='btn'>+</button>
+        <ul *ngFor='let item of list'>
+            <li>{{item.name}}<button (click)='removeTask(item.id)' class='btn1'>-</button></li>
+        </ul>
+        <h2>Voçê tem números de tarefas<button>remover tudo</button></h2>
+    </div>
+</div>
